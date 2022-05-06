@@ -1,0 +1,12 @@
+.card-game-back{
+    display: grid;
+    place-content: center;
+    width: 130px;
+    height: 160px;
+    background-color: var(--color-dark-blue);
+    border: white solid 0.3rem;
+}
+
+.card-game-back-icon{
+    
+}
