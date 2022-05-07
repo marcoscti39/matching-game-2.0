@@ -5,6 +5,7 @@
     height: 160px;
     background-color: var(--color-dark-blue);
     border: white solid 0.3rem;
+    cursor: pointer;
 }
 
 .card-game-back-icon{

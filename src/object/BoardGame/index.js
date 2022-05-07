@@ -1,5 +1,5 @@
 import CardGame from "../../components/CardGame"
-
+import "./style.css"
 function CardContainer(){
     let $htmlCard = CardGame()
     return (

@@ -1,0 +1,10 @@
+main{
+    background-color: var(--color-pomb-power);
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 1.2rem;
+    border: .4rem solid rgb(255, 255, 255);
+}
