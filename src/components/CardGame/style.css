@@ -1,13 +1,26 @@
-.card-game-back{
+.card-container{
+    
+}
+
+.card-front-and-back{
     display: grid;
     place-content: center;
+    cursor: pointer;
+}
+.card-game-back-icon{
+    object-fit: none;
+
     width: 130px;
     height: 160px;
     background-color: var(--color-dark-blue);
     border: white solid 0.3rem;
-    cursor: pointer;
 }
 
-.card-game-back-icon{
-    
+.card-game-front-icon{
+    object-fit: none;
+
+    width: 130px;
+    height: 160px;
+    background-color: var(--color-fiery-rose);
+    border: white solid 0.3rem;
 }

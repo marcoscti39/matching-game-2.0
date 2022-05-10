@@ -1,8 +1,12 @@
 import "./style.css";
-function CardGame(){
+function CardGame(icon){
     return /* html*/`
-    <article class="card-game-back">
-        <img class="card-game-back-icon" src="./assets/imgs/back-card.png">
+    <article class="card-container">
+        <div class="card-front-and-back">
+            <img class="card-game-back-icon" src="./assets/imgs/back-card.png">
+            <img class="card-game-front-icon" src="./assets/imgs/${icon}.png">
+        </div>
+
     </article>`
 };
 

@@ -2,4 +2,5 @@ body{
     background: var(--color-dark-blue);
     display: flex;
     justify-content: center;
+    font-family: 'Press Start 2P', cursive;
 }
