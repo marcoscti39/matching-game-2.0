@@ -15,6 +15,6 @@ ${$cardContainer}
 `)
 
 
-const cards = document.querySelectorAll(".card-container")
-
-CardFlipper(cards)
+const $cards = document.querySelectorAll(".card-container")
+const $arrow = document.querySelector(".arrow-player-turn")
+CardFlipper($cards, $arrow)

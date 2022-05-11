@@ -1,5 +1,6 @@
-function CardFlipper(element){
+function CardFlipper(element, arrow){
     let clicks = 0;
+    let arrowMove = true;
     element.forEach(card =>{
         card.addEventListener("click", (e) =>{
             let rightElementToFlip;
@@ -18,6 +19,18 @@ function CardFlipper(element){
             }
             rightElementToFlip.classList.add("flip-card")
             if(clicks === 2){
+                if(arrowMove){
+                    setTimeout(() =>{
+                        arrow.style.left = "61%"
+                    },500)
+                    arrowMove = false;
+                } else if (!arrowMove){
+                    setTimeout(() =>{
+                        arrow.style.left = "34%"
+                    },500)
+                    arrowMove = true;
+                }
+                
                 setTimeout(()=>{
                     element.forEach(card =>{
                         card.childNodes[1].classList.remove("flip-card")

@@ -1,0 +1,6 @@
+.arrow-player-turn{
+    position: absolute;
+    top: 10px;
+    left: 34%;
+    transition: all 500ms;
+}
