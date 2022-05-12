@@ -8,9 +8,9 @@ function ScoreBoard(){
     <header>
         ${ArrowPlayerTurn()}
         ${PlayerGame("Player 1")}
-        ${PointMaker()}
+        ${PointMaker("player1")}
         ${VersusIcon()}
-        ${PointMaker()}
+        ${PointMaker("player2")}
         ${PlayerGame("player 2")}
     </header>`
 }

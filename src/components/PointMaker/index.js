@@ -1,10 +1,10 @@
 import "./style.css"
-function PointMaker(){
+function PointMaker(player){
     return /*html */`
-    <section class="points-container">
-        <div class="points"></div>
-        <div class="points"></div>
-        <div class="points"></div>
+    <section class="${player} points-container">
+        <div class="point 1"></div>
+        <div class="point 2"></div>
+        <div class="point 3"></div>
     </section>`
 }
 

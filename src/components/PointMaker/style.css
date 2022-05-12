@@ -3,7 +3,7 @@
     border: var(--color-fiery-rose) solid 2px;
 }
 
-.points{
+.point{
     width: 14px;
     height: 14px;
     background-color: var(--color-old-silver);

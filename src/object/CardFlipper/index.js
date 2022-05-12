@@ -1,6 +1,13 @@
+import CountPoints from "../CountPoints";
+
 function CardFlipper(element, arrow){
     let clicks = 0;
     let arrowMove = true;
+    let TwoCardsFlipped = [];
+    let playerOnePoints = 0;
+    let playerTwoPoints = 0;
+    let playerOneTurn = false;
+
     element.forEach(card =>{
         card.addEventListener("click", (e) =>{
             let rightElementToFlip;
@@ -18,6 +25,7 @@ function CardFlipper(element, arrow){
                 }
             }
             rightElementToFlip.classList.add("flip-card")
+            
             if(clicks === 2){
                 if(arrowMove){
                     setTimeout(() =>{
@@ -30,10 +38,38 @@ function CardFlipper(element, arrow){
                     },500)
                     arrowMove = true;
                 }
+                if(playerOneTurn){
+                    playerOneTurn = false
+                } else if (!playerOneTurn){
+                    playerOneTurn = true;
+                }
                 
                 setTimeout(()=>{
                     element.forEach(card =>{
+                        if(card.childNodes[1].classList.contains("flip-card")){
+                            let cardFlipped = card.childNodes[1].childNodes[3].
+                                childNodes[1].src.split("/")[5];
+                                
+                            TwoCardsFlipped.push(cardFlipped)
+
+                            if(TwoCardsFlipped.length === 2){
+                                if(TwoCardsFlipped[0] === TwoCardsFlipped[1]){
+                                    if(playerOneTurn){
+                                        playerOnePoints ++;
+                                        console.log(`player 1: ${playerOnePoints} points`)
+                                    } else if (!playerOneTurn){
+                                        playerTwoPoints ++;
+                                        console.log(`player 2: ${playerTwoPoints} points`)
+                                    }
+                                CountPoints(playerOnePoints, playerTwoPoints)
+                                }
+                                TwoCardsFlipped.splice(0, 2)
+
+                            }
+                        }
+
                         card.childNodes[1].classList.remove("flip-card")
+                        
                     })
                 },500)
                 clicks = 0;
